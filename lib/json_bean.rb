@@ -1,3 +1,1 @@
-require_relative "version"
-
-module JsonBean end
+require_relative "json_bean/mongoid"
