@@ -10,9 +10,9 @@ Array.class_eval do
     res = []
     self.each do |data|
 
-      res.push data.to_json_bean(options) if data.method_defined? :to_json_bean
+      res.push data.as_json_bean(options) if data.class.method_defined? :as_json_bean
     end
 
-    return Json.generate(res)
+    return JSON.generate(res)
   end
 end
